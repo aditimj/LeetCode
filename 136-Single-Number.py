@@ -1,9 +1,22 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        res = 0
+
+        cnt = {}
+        ans = 0
         for i in nums:
-            # print('i',i)
-            # print(f'res {res} ^ i {i}')
-            res ^= i
-            # print('res',res)
-        return res   
+            if i in cnt:
+                cnt[i] += 1
+            else:
+                cnt[i]=1
+        for key,values in cnt.items():
+            if values == 1:
+                ans = key
+        return ans
+        
+
+
+
+        # res = 0
+        # for i in nums:
+        #     res ^= i
+        # return res   
