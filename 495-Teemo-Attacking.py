@@ -15,6 +15,4 @@ class Solution:
         #     num2 = i + duration - 1
         #     for i in range(num1, num2 +1):
         #         ans.append(i)
-        # res = set(ans)
-        # final = len(res)
-        # return final
+        # return len(set(ans))
