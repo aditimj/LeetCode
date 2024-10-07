@@ -7,11 +7,9 @@ class Solution:
             if n % i == 0:
                 kfac[i] = cnt
                 cnt +=1
-        print(kfac)
-        if k in kfac.values():
-            for key, values in kfac.items():
-                if values == k:
-                    return key
+        for key, values in kfac.items():
+            if values == k:
+                return key
 
         return -1
 
