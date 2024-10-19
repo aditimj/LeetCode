@@ -6,9 +6,7 @@ class Solution:
                 freq[i] += 1
             else:
                 freq[i] = 1
-        def get_value(item):
-            return item[1]
-        new = dict(sorted(freq.items(), key=get_value, reverse=True))
+        new = dict(sorted(freq.items(), key=lambda item: item[1], reverse=True))
         out = dict(itertools.islice(new.items(),k))
         ans = []
         for key in out.keys():
